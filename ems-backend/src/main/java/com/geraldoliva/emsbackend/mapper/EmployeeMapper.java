@@ -1,12 +1,12 @@
 package com.geraldoliva.emsbackend.mapper;
 
-import com.geraldoliva.emsbackend.dto.EmployeeDto;
+import com.geraldoliva.emsbackend.dto.EmployeeDTO;
 import com.geraldoliva.emsbackend.entity.Employee;
 
 public class EmployeeMapper {
 
-    public static EmployeeDto mapToEmployeeDto(Employee employee) {
-        return new EmployeeDto(
+    public static EmployeeDTO mapToEmployeeDTO(Employee employee) {
+        return new EmployeeDTO(
                 employee.getId(),
                 employee.getFirstName(),
                 employee.getLastName(),
@@ -14,12 +14,12 @@ public class EmployeeMapper {
         );
     }
 
-    public static Employee mapToEmployee(EmployeeDto employeeDto) {
+    public static Employee mapToEmployee(EmployeeDTO employeeDTO) {
         return new Employee(
-                employeeDto.getId(),
-                employeeDto.getFirstName(),
-                employeeDto.getLastName(),
-                employeeDto.getEmail()
+                employeeDTO.getId(),
+                employeeDTO.getFirstName(),
+                employeeDTO.getLastName(),
+                employeeDTO.getEmail()
         );
     }
 }
